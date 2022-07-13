@@ -21,10 +21,18 @@ header{
     line-height: 30px;
 }
 
-.input-container button{
+.input-container #genera{
     padding: 5px 10px 5px;
     background-color: goldenrod;
     border: 1px solid goldenrod;
+    cursor: pointer;
+}
+
+.input-container #elimina{
+    padding: 5px 10px 5px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
     cursor: pointer;
 }
 

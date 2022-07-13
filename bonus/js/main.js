@@ -73,6 +73,13 @@ genera.addEventListener('click',
     }
 );
 
+const elimina = document.getElementById('elimina');
+elimina.addEventListener('click', 
+    function(){
+        gridDom.innerHTML = '';
+    }
+);
+
 
 
 
