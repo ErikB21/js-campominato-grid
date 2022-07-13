@@ -1,7 +1,30 @@
 // prendo l'elemento principale che rappresenta la griglia
 const gridDom = document.getElementById('grid');
 
+//genero una costante per il button genera
+const genera = document.getElementById('genera');
+//creo un evento che al click
+//richiamo la funzione creaGriglia con valori diversi
+//se l'elemento con id "difficoltà" è su easy darà 100 quadratini
+//se invece l'elemento con id "difficoltà" è su medium darà 81 quadratini
+//se invece l'elemento con id "difficoltà" è su hard darà 49 quadratini
+genera.addEventListener('click', 
+    function(){
+        
+        if(document.getElementById('difficoltà').value == 'easy'){
+            creaGriglia(100, 'easy');
+        }else if(document.getElementById('difficoltà').value == 'medium'){
+            creaGriglia(81, 'medium');
+        }else if (document.getElementById('difficoltà').value == 'hard'){
+            creaGriglia(49, 'hard');
+        }
+        
+        
+    }
+);
+
 // creo un singolo quadrato con al suo interno i numeri da 1 a quadratini(in base alla scelta varia)
+// richiamo la mia funzione createGridSquare
 // aggiungo l'evento click e i suoi effetti
 // aggiungo il tutto alla griglia
 function creaGriglia(quadratini, livello){
@@ -19,29 +42,6 @@ function creaGriglia(quadratini, livello){
     }
 }
 
-//genero una costante per il button genera
-const genera = document.getElementById('genera');
-//creo un evento che al click
-//richiamo la funzione creaGriglia con valori diversi
-//se l'elemento con id "difficoltà" è su easy darà 100 quadratini
-//se invece l'elemento con id "difficoltà" è su medium darà 81 quadratini
-//se l'elemento con id "difficoltà" è su hard darà 49 quadratini
-genera.addEventListener('click', 
-    function(){
-        
-        if(document.getElementById('difficoltà').value == 'easy'){
-            creaGriglia(100, 'easy');
-        }else if(document.getElementById('difficoltà').value == 'medium'){
-            creaGriglia(81, 'medium');
-        }else if (document.getElementById('difficoltà').value == 'hard'){
-            creaGriglia(49, 'hard');
-        }
-        
-        
-    }
-);
-
-
 //creo un elemento del dom di tipo div con classe square
 function createGridSquare(number, livello){
 
@@ -49,7 +49,6 @@ function createGridSquare(number, livello){
     currentElement.classList.add('square');
     currentElement.classList.add(livello);
     currentElement.append(number);
-    
     
     return currentElement;
         
