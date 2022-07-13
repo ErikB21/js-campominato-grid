@@ -65,12 +65,23 @@ main{
     display: block;
 }
 
-.none{
-    display: none;
-}
-
 .text{
     margin: 30px 0;
+}
+
+.hard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+  
+.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+  
+.easy {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
 }
 
 
