@@ -28,6 +28,7 @@ genera.addEventListener('click',
 // aggiungo l'evento click e i suoi effetti
 // aggiungo il tutto alla griglia
 function creaGriglia(quadratini, livello){
+    gridDom.innerHTML = '';
     for(let i = 1; i <= quadratini; i++){
 
         const currentElement = createGridSquare(i, livello);
